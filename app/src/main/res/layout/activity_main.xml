@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_view"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#fff"
+        android:hint="输入当前进度"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/bt_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="20dp"
+        android:background="#fff"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:text="输入角标值，点击刷新控件"
+        android:textSize="20sp" />
+
+    <com.talkplus.mylibrary.demoView
+        android:id="@+id/dv_view"
+        android:layout_width="410dp"
+        android:layout_height="210dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        app:angle="40"
+        app:insideBG="#383939"
+        app:outsideBG="#262728"
+        app:outsideDefultTextColor="#767676"
+        app:outsideW="20dp"
+        app:progressBG="#0BBA70"
+        app:progressW="2dp" />
+
+</LinearLayout>

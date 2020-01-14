@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <declare-styleable name="demoViewStyle">
+            <attr name="outsideW" format="dimension"/>
+            <attr name="progressW" format="dimension"/>
+            <attr name="angle" format="integer"/>
+            <attr name="outsideBG" format="color"/>
+            <attr name="insideBG" format="color"/>
+            <attr name="progressBG" format="color"/>
+            <attr name="outsideDefultTextColor" format="color"/>
+            <attr name="outsideActivateTextColor" format="color"/>
+            <attr name="outsideSelectTextColor" format="color"/>
+            <attr name="insideDefultTextColor" format="color"/>
+            <attr name="insideActivateTextColor" format="color"/>
+            <attr name="centerTextColor" format="color"/>
+            <attr name="bottomTextColor" format="color"/>
+        </declare-styleable>
+</resources>
