@@ -24,7 +24,10 @@ afterEvaluate { module ->
         from androidJavadoc.destinationDir
     }
 
-
+    artifacts {
+        archives androidSourcesJar
+        archives androidJavadocJar
+    }
 
     uploadArchives {
         repositories {

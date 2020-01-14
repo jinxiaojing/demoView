@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>demoview</groupId>
+  <artifactId>talkcloud</artifactId>
+  <version>1.0</version>
+  <packaging>aar</packaging>
+  <dependencies>
+    <dependency>
+      <artifactId>mylibrary-release</artifactId>
+      <type>aar</type>
+      <scope>compile</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>mylibrary-release</artifactId>
+          <groupId>mylibrary</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>androidx.appcompat</groupId>
+      <artifactId>appcompat</artifactId>
+      <version>1.1.0</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+</project>
