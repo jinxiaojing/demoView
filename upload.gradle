@@ -1,0 +1,43 @@
+apply plugin: 'maven'
+
+afterEvaluate { module ->
+    // 将源码打包发布
+    task androidSourcesJar(type: Jar) {
+        classifier = 'sources'
+        from android.sourceSets.main.java.srcDirs
+    }
+
+    // 将类说明文档打包发布
+    tasks.withType(Javadoc) {
+        // 设置编码
+        options.encoding = 'UTF-8'
+    }
+    task androidJavadoc(type: Javadoc) {
+        source = android.sourceSets.main.java.srcDirs
+        classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+        destinationDir = file("./javadoc/")
+        // 忽略错误
+        failOnError false
+    }
+    task androidJavadocJar(type: Jar, dependsOn: androidJavadoc) {
+        classifier = 'javadoc'
+        from androidJavadoc.destinationDir
+    }
+
+
+
+    uploadArchives {
+        repositories {
+            mavenDeployer {
+                pom.artifactId = "talkcloud"
+                pom.groupId = "demoview"
+                pom.version = android.defaultConfig.versionName
+                pom.packaging = "arr"
+            }
+            doLast {
+                println "upload aar success."
+            }
+        }
+    }
+}
+
